@@ -3,7 +3,4 @@ tasks:
 - id: 1
   title: Do task manager
   description: Running through task manager to prep for 1602  Mod2
-- id: 2
-  title: kjd
-  description: kj
-total: 2
+total: 3
