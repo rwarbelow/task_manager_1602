@@ -1,6 +1,12 @@
 ---
 tasks:
 - id: 1
-  title: Do task manager
-  description: Running through task manager to prep for 1602  Mod2
-total: 3
+  title: Eat Cheerios
+  description: So yum.
+- id: 4
+  title: Example Task
+  description: Example Description
+- id: 5
+  title: Example Task
+  description: Example Description
+total: 5
