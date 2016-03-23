@@ -42,8 +42,6 @@ class TaskManager
   end
 
   def raw_task(id)
-    # => The .find method used here is the .find method from Array Class,
-    # => not the find method defined below within TaskManager Class.
     raw_tasks.find { |task| task["id"] == id }
   end
 
