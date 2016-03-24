@@ -19,7 +19,7 @@ module TestHelpers
     @task_manager ||= TaskManager.new(database)
   end
 
-  def create_tasks(num = 2)
+  def create_tasks(num)
     num.times do |i|
       task_manager.create({
         :title       => "Task Title #{i + 1}",
