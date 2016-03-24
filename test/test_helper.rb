@@ -15,7 +15,7 @@ module TestHelpers
   end
 
   def task_manager
-    database = YAML::Store.new('db/task_manager_test')
+    database = Sequel.sqlite('db/task_manager_test.sqlite')
     @task_manager ||= TaskManager.new(database)
   end
 
