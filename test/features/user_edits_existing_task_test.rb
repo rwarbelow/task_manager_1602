@@ -7,14 +7,16 @@ class UserCanEditAnExistingTask < Minitest::Test
   def test_existing_task_is_updated_with_new_information
     task_manager.create({ title: 'Original Title',
                          description: 'Original Description' })
+    
+    task = task_manager.all.last
 
-    visit '/tasks/1/edit'
+    visit "/tasks/#{task.id}/edit"
 
     fill_in 'task[title]', with: 'Updated Title'
     fill_in 'task[description]', with: 'Updated Description'
     click_button 'Submit'
 
-    assert_equal '/tasks/1', current_path
+    assert_equal "/tasks/#{task.id}", current_path
 
     within 'h2' do
       assert page.has_content? 'Updated Title'
